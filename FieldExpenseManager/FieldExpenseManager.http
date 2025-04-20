@@ -1,0 +1,6 @@
+@FieldExpenseManager_HostAddress = http://localhost:5219
+
+GET {{FieldExpenseManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
