@@ -74,7 +74,9 @@ Detaylı endpoint açıklamaları ve testler için Swagger arayüzünü (/swagge
 Örnek Kullanıcılar:
 
 •	Admin: burcu@gmail.com / AdminSifre123!
+
 •	Personel: personel@gmail.com / PersonelSifre789.
+
 •	Personel: personel@gmail.com / PersonelSifre7897.
 
  API Test ve Dokümantasyon
