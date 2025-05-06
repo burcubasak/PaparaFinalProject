@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "5b265b4f-f9c2-4a23-995f-15b2e1301488",
+		"name": "FİELD EXPENSE MANAGER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27232641",
+		"_collection_link": "https://galactic-eclipse-736861.postman.co/workspace/New-Team-Workspace~1440db03-bc50-48b3-b28f-b1c35d641dda/collection/27232641-5b265b4f-f9c2-4a23-995f-15b2e1301488?action=share&source=collection_link&creator=27232641"
+	},
+	"item": [
+		{
+			"name": "LOGİN",
+			"item": [
+				{
+					"name": "AuthLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/Auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXPENSE",
+			"item": [
+				{
+					"name": "GetAllExpense",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/GetAllPersonnel",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"GetAllPersonnel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/ExpenseById/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"ExpenseById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expense/my",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/my",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ExpenseCategoryId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExpenseDate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Location",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AttachmentFile",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/Expense",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put/Reject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"reason\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/2/reject",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"2",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put/Approve",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/2/approve",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"2",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Expense/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Expense",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXPENSE CATEGORY",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/ExpenseCategory",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"ExpenseCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/ExpenseCategory/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"ExpenseCategory",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"description\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/ExpenseCategory",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"ExpenseCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"description\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/ExpenseCategory/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"ExpenseCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/ExpenseCategory/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"ExpenseCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REPORT",
+			"item": [
+				{
+					"name": "MyExpenseHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Reports/MyExpenseHistory?startDate=2025-04-01&endDate=2025-05-05",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Reports",
+								"MyExpenseHistory"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-05-05"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentDensity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Reports/PaymentDensity?startDate=2025-04-01&endDate=2025-05-05&period=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Reports",
+								"PaymentDensity"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-05-05"
+								},
+								{
+									"key": "period",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PersonnelSpending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Reports/PersonnelSpending?startDate=2025-04-01&endDate=2025-05-05&period=1&personnelId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Reports",
+								"PersonnelSpending"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-05-05"
+								},
+								{
+									"key": "period",
+									"value": "1"
+								},
+								{
+									"key": "personnelId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApprovalStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/Reports/ApprovalStatus?startDate=2025-04-01&endDate=2025-05-05&period=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"Reports",
+								"ApprovalStatus"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-05-05"
+								},
+								{
+									"key": "period",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "GetAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/User",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/User/GetUserById/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"User",
+								"GetUserById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"workPhoneNumber\": \"string\",\r\n  \"iban\": \"string\",\r\n  \"role\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/User/CreateUser",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"User",
+								"CreateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lastName\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"workPhoneNumber\": \"string\",\r\n  \"iban\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7234/api/User/UpdateUser/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"User",
+								"UpdateUser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7234/api/User/DeleteUser/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7234",
+							"path": [
+								"api",
+								"User",
+								"DeleteUser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
