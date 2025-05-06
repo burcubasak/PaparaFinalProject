@@ -1,0 +1,8 @@
+﻿namespace FieldExpenseManager.FieldExpense.Application.DTOs.ExpenseCategory
+{
+    public class CreateCategoryDto
+    {
+        public string Name { get; set; } 
+        public string? Description { get; set; }
+    }
+}
